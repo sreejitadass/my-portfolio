@@ -1,6 +1,9 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function NavBar() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const resumeRef = useRef(null);
@@ -8,8 +11,26 @@ export default function NavBar() {
   const handleScrollToSection = (refValue) => {
     if (refValue.current) {
       refValue.current.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false); // Close menu on section click
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 704);
+    };
+
+    // Set initial state
+    handleResize();
+
+    // Add resize event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <nav className="section-nav">
@@ -45,40 +66,95 @@ export default function NavBar() {
           </a>
         </li>
       </ul>
-      <ul className="page-links">
-        <li>
-          <a href="#" className="menu">
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="#skills"
-            className="menu"
-            onClick={() => handleScrollToSection(skillsRef)}
-          >
-            <span>Skills</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="#projects"
-            className="menu"
-            onClick={() => handleScrollToSection(projectsRef)}
-          >
-            <span>Projects</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="#resume"
-            className="menu"
-            onClick={() => handleScrollToSection(resumeRef)}
-          >
-            <span>My Resume</span>
-          </a>
-        </li>
-      </ul>
+      {isMobile ? (
+        <svg
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="btn-mobile-nav"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+          />
+        </svg>
+      ) : (
+        <ul className="page-links">
+          <li>
+            <a href="#" className="menu">
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#skills"
+              className="menu"
+              onClick={() => handleScrollToSection(skillsRef)}
+            >
+              <span>Skills</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#projects"
+              className="menu"
+              onClick={() => handleScrollToSection(projectsRef)}
+            >
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#resume"
+              className="menu"
+              onClick={() => handleScrollToSection(resumeRef)}
+            >
+              <span>My Resume</span>
+            </a>
+          </li>
+        </ul>
+      )}
+
+      {isMobile && isMenuOpen && (
+        <ul className="page-links mobile">
+          <li>
+            <a href="#" className="menu" onClick={() => setIsMenuOpen(false)}>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#skills"
+              className="menu"
+              onClick={() => handleScrollToSection(skillsRef)}
+            >
+              <span>Skills</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#projects"
+              className="menu"
+              onClick={() => handleScrollToSection(projectsRef)}
+            >
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#resume"
+              className="menu"
+              onClick={() => handleScrollToSection(resumeRef)}
+            >
+              <span>My Resume</span>
+            </a>
+          </li>
+        </ul>
+      )}
     </nav>
   );
 }
