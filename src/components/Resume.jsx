@@ -4,7 +4,9 @@ export default function () {
   return (
     <>
       <section className="section-resume" id="resume">
-        <h1>My Resume</h1>
+        <h1>
+          My <span className="half-text">Resume</span>
+        </h1>
         <p>
           Hey there! Below I have attached my resume, which highlights my
           skills, experiences, and the innovative projects I've been involved

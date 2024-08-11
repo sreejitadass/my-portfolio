@@ -13,6 +13,11 @@
     padding: 4rem; /* Adjust padding for smaller screens */
   }
 
+  .button-hero a {
+    border-radius: 16px;
+    margin-bottom: 3rem;
+  }
+
   .section-hero {
     padding: 4rem; /* Reduce padding for hero section */
   }
@@ -137,14 +142,6 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .projects-box {
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* Stack project cards in a single column */
-  }
-
   .section-projects p,
   .section-skills p {
     text-align: center;
@@ -177,6 +174,10 @@
   .section-footer {
     max-width: 100%; /* Full width to utilize available screen space */
     padding: 4rem; /* Adjust padding for smaller screens */
+  }
+
+  .button-hero {
+    padding: 1.5rem 2rem;
   }
 
   h1 {
@@ -229,18 +230,46 @@
     height: auto;
   }
 
-  .projects-box {
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* Stack project cards in a single column */
-  }
-
   .section-projects p,
   .section-skills p {
     text-align: center;
     padding: 3rem;
+  }
+
+  .projects-box {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+    place-items: center;
+    position: relative;
+  }
+
+  .projects-description {
+    position: absolute;
+    left: 10%;
+    font-size: 2rem;
+  }
+
+  .project-card-1,
+  .project-card-2,
+  .project-card-3,
+  .project-card-4 {
+    width: 90%;
+    height: 400px;
+  }
+
+  .email-info {
+    margin-top: 8rem; /* Reduced margin-top */
+    gap: 1rem; /* Reduced gap */
+  }
+
+  .email-info p {
+    font-size: 1.8rem; /* Adjust font-size for smaller screens */
+  }
+
+  .email-button {
+    padding: 1rem 2rem; /* Adjust padding for smaller screens */
+    font-size: 1.6rem; /* Adjust font-size for smaller screens */
+    margin-top: 3rem; /* Reduced margin-top */
   }
 
   /* Image Sizes */
@@ -278,10 +307,6 @@
     grid-template-columns: 1fr;
   }
 
-  .projects-box {
-    grid-template-columns: 1fr; /* Stack project cards in a single column */
-  }
-
   .technologies-1,
   .technologies-2,
   .technologies-3,
@@ -300,6 +325,55 @@
 
   .page-links.mobile {
     display: flex;
+  }
+
+  .project-card-1,
+  .project-card-2,
+  .project-card-3,
+  .project-card-4 {
+    background: #000428; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #004e92,
+      #000428
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #004e92,
+      #000428
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .projects-description {
+    color: #c2dbe1;
+    font-weight: 400;
+  }
+
+  .project-title {
+    text-align: center;
+  }
+
+  .tech-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .repo-link {
+    left: 40%;
+  }
+
+  .email-info {
+    margin-top: 8rem;
+    display: block;
+  }
+
+  .project-card-4 {
+    margin-bottom: 6rem;
+  }
+
+  .email-info p {
+    margin-top: -5rem;
   }
 }
 
@@ -370,16 +444,16 @@
     padding: 4rem;
   }
 
-  .technologies-1,
-  .technologies-2,
-  .technologies-3,
-  .technologies-4 {
-    grid-template-columns: 1fr;
+  .skills-section h2 {
+    font-size: 4rem;
   }
 
-  .technologies-icon {
-    justify-self: center;
-    width: 180px;
+  .skill {
+    font-size: 6.5rem;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
   }
 
   .section-skills h2 {

@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import myPicture from "./../assets/my-pic.jpeg";
 
 export default function AboutMe() {
   const aboutMeRef = useRef(null);
@@ -7,37 +8,91 @@ export default function AboutMe() {
     <section className="section-about-me" id="about-me" ref={aboutMeRef}>
       <div className="about-me-grid">
         <div className="about-me-text-box">
-          <h1>About Me</h1>
+          <h1>
+            Who <span className="half-text">I'm</span>
+          </h1>
           <p className="about-me-text">
-            Hi there! I'm a passionate and dedicated Computer Science student
-            currently in my third year. My journey in the world of coding
-            started with a simple curiosity, and now, it's a full-blown love
-            affair with technology and innovation.
+            Hi there! I'm a passionate and dedicated{" "}
+            <span className="half-text" style={{ fontWeight: "bold" }}>
+              Computer Science
+            </span>{" "}
+            student currently in my{" "}
+            <span className="half-text" style={{ fontWeight: "bold" }}>
+              third year{" "}
+            </span>
+            . My journey in the world of coding started with a simple curiosity,
+            and now, it's a full-blown love affair with technology and
+            innovation.
           </p>
-          <h3>My Journey</h3>
+          <h3>
+            <span className="half-text">My</span> Journey
+          </h3>
           <p className="about-me-text">
             I'm well-versed in a variety of programming languages and web
-            technologies. I enjoy diving deep into these technologies to create
-            seamless and engaging web experiences. I love bringing ideas to life
-            through code.
+            technologies. My fields of interest include{" "}
+            <span className="half-text" style={{ fontWeight: "bold" }}>
+              fullstack web development
+            </span>
+            , and I'm quite fluent in basics like{" "}
+            <span className="half-text" style={{ fontWeight: "bold" }}>
+              C++
+            </span>
+            ,{" "}
+            <span className="half-text" style={{ fontWeight: "bold" }}>
+              Python
+            </span>
+            ,{" "}
+            <span className="half-text" style={{ fontWeight: "bold" }}>
+              JavaScript
+            </span>{" "}
+            and so on. I love bringing ideas to life through code.
           </p>
-          <h3>Beyond the code</h3>
+          <h3>
+            Beyond <span className="half-text">the code</span>
+          </h3>
           <p className="about-me-text">
-            When I'm not immersed in coding, you can find me exploring the
-            latest tech trends, experimenting with new tools and frameworks, and
-            working on exciting projects that challenge my skills and
-            creativity. I believe in continuous learning and am always on the
-            lookout for opportunities to expand my knowledge and take on new
-            challenges.
+            When I'm not immersed in coding, you can find me{" "}
+            <span className="half-text" style={{ fontWeight: "bold" }}>
+              exploring the latest tech trends
+            </span>
+            ,{" "}
+            <span className="half-text" style={{ fontWeight: "bold" }}>
+              experimenting with new tools and frameworks
+            </span>
+            , and
+            <span className="half-text" style={{ fontWeight: "bold" }}>
+              working on exciting projects
+            </span>{" "}
+            that challenge my skills and creativity. I believe in continuous
+            learning and am always on the lookout for opportunities to expand my
+            knowledge and take on new challenges.
           </p>
-          <h3>Hobbies and Interests</h3>
+          <h3>
+            <span className="half-text">Hobbies and</span> Interests
+          </h3>
           <p className="about-me-text">
             Apart from my tech pursuits, my hobbies include enjoying a variety
-            of outdoor activities, reading novels, cooking, art and painting.
+            of{" "}
+            <span className="half-text" style={{ fontWeight: "bold" }}>
+              outdoor activities
+            </span>
+            ,{" "}
+            <span className="half-text" style={{ fontWeight: "bold" }}>
+              reading novels
+            </span>
+            ,{" "}
+            <span className="half-text" style={{ fontWeight: "bold" }}>
+              cooking
+            </span>
+            ,{" "}
+            <span className="half-text" style={{ fontWeight: "bold" }}>
+              art and painting
+            </span>
+            .
           </p>
         </div>
         <div className="about-me-img-box">
-          <img src="src/assets/my-pic.jpeg" alt="My photo" className="my-pic" />
+          <img src={myPicture} alt="My photo" className="my-pic" />
           <div className="contact-img-box">
             <ul>
               <li>
