@@ -9,6 +9,7 @@ import {
 import { FaServer } from "react-icons/fa"; // Express generic server icon from FontAwesome
 import React, { useState } from "react";
 import { DiMongodb } from "react-icons/di"; // MongoDB icon from Devicons
+import ResumePDF from "./../assets/Resume_Updated.pdf";
 
 const descriptions1 = [
   "Tour and booking management RESTful API built with MERN stack and user authentication implemented using jwt",
@@ -27,7 +28,7 @@ const descriptions4 = [
 ];
 
 export default function Projects() {
-  const email = "sreejita.das16@gmail.com";
+  const email = "dassreejita1609@gmail.com";
   const [buttonText, setButtonText] = useState("Copy my email");
 
   function copyEmailHandler() {
@@ -159,9 +160,16 @@ export default function Projects() {
           Want to work on more exciting projects?
         </p>
         <p>Click below to get started!</p>
-        <button className="email-button" onClick={copyEmailHandler}>
-          {buttonText}
-        </button>
+        <div className="email-resume-container">
+          <button className="email-button" onClick={copyEmailHandler}>
+            {buttonText}
+          </button>
+          <div className="resume-download">
+            <a href={ResumePDF} download className="email-button">
+              <span>Download Resume</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

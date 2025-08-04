@@ -477,17 +477,11 @@ h3 {
   line-height: 1.6;
 }
 
-.resume-img-box {
+.email-resume-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 6.4rem;
-}
-
-.resume-download {
-  display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  gap: 3.5rem;
 }
 
 .download-button {
@@ -524,4 +518,137 @@ h3 {
   font-weight: 300;
   font-size: 1.5rem;
   background-color: #020e1c;
+}
+
+/* Contact Section Container */
+.section-resume {
+  background-image: linear-gradient(60deg, #02162f 0%, #0e0f0f 100%);
+  padding: 10rem;
+}
+
+/* Heading + Text */
+.section-resume h1 {
+  margin-bottom: 4rem;
+  color: #357fa7;
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.section-resume p {
+  margin-top: 1rem;
+  font-size: 2.2rem;
+  line-height: 1.6;
+  color: #f4eeee;
+  text-align: center;
+}
+
+/* Contact Card Layout */
+.contact-card.refined-layout {
+  display: flex;
+  max-width: 1000px;
+  margin: 6rem auto 0 auto;
+  padding: 3rem;
+  gap: 3rem;
+  background-color: #101314;
+  border-radius: 22px;
+  box-shadow: 0 0 12px rgba(2, 26, 40, 0.5);
+  flex-wrap: wrap;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Form Fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1.9rem;
+  color: #a3d7ed;
+  margin-bottom: 0.8rem;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: inherit;
+  font-size: 1.6rem;
+  padding: 1rem;
+  background-color: #0c0e0f;
+  color: #f4eeee;
+  border: 1px solid #2c2f30;
+  border-radius: 12px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #357fa7;
+  box-shadow: 0 0 0 3px rgba(53, 127, 167, 0.3);
+}
+
+/* Send Button */
+.email-button {
+  align-self: flex-end;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-size: 1.7rem;
+  background-color: #0c6ca6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.email-button:hover {
+  background-color: #084a73;
+  box-shadow: 0 0 10px rgba(242, 239, 239, 0.85);
+}
+
+/* Right Side: Image Box */
+.contact-image-box {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.contact-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  filter: brightness(0.9) contrast(1.05) saturate(1.2);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .contact-card.refined-layout {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .contact-image {
+    max-height: 300px;
+  }
+
+  .email-button {
+    align-self: center;
+    margin-top: 2rem;
+  }
+
+  .section-resume h1 {
+    font-size: 4rem;
+  }
+
+  .section-resume p {
+    font-size: 2rem;
+  }
 }
