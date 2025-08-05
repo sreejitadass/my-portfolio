@@ -1,6 +1,7 @@
 import Hero from "./components/Hero.jsx";
 import AboutMe from "./components/AboutMe.jsx";
 import Skills from "./components/Skills.jsx";
+import Experience from "./components/Experience.jsx";
 import Projects from "./components/Projects.jsx";
 import ContactMe from "./components/ContactMe.jsx";
 import Footer from "./components/Footer.jsx";
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <AboutMe />
       <Skills />
+      <Experience />
       <Projects />
       <ContactMe />
       <Footer />

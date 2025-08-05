@@ -252,7 +252,9 @@
   .project-card-1,
   .project-card-2,
   .project-card-3,
-  .project-card-4 {
+  .project-card-4,
+  .project-card-5,
+  .project-card-6 {
     width: 90%;
     height: 400px;
   }
@@ -280,7 +282,9 @@
   .technologies-1,
   .technologies-2,
   .technologies-3,
-  .technologies-4 {
+  .technologies-4,
+  .technologies-5,
+  .technologies-6 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
@@ -330,7 +334,9 @@
   .project-card-1,
   .project-card-2,
   .project-card-3,
-  .project-card-4 {
+  .project-card-4,
+  .project-card-5,
+  .project-card-6 {
     background: #000428; /* fallback for old browsers */
     background: -webkit-linear-gradient(
       to right,

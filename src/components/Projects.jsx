@@ -1,30 +1,59 @@
+import React, { useState } from "react";
+import ResumePDF from "./../assets/Resume_Updated.pdf";
+
+// Tech stack icons
 import {
   FaReact,
   FaNodeJs,
+  FaServer,
   FaDatabase,
   FaJsSquare,
+  FaPython,
   FaHtml5,
   FaCss3Alt,
-} from "react-icons/fa"; // React and Node.js icons from FontAwesome
-import { FaServer } from "react-icons/fa"; // Express generic server icon from FontAwesome
-import React, { useState } from "react";
-import { DiMongodb } from "react-icons/di"; // MongoDB icon from Devicons
-import ResumePDF from "./../assets/Resume_Updated.pdf";
+  FaUserShield,
+} from "react-icons/fa";
+
+import { DiMongodb } from "react-icons/di";
+import {
+  SiChainlink,
+  SiGooglecalendar,
+  SiMysql,
+  SiStreamlit,
+  SiSqlite,
+  SiGooglegemini,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiTypescript,
+  SiClerk,
+  SiJavascript,
+  SiMongodb,
+  SiStripe,
+  SiOpenai,
+} from "react-icons/si";
 
 const descriptions1 = [
-  "Tour and booking management RESTful API built with MERN stack and user authentication implemented using jwt",
+  "AI-powered personalized study assistant that delivers smart summaries, quizzes, notes, and calendar-integrated scheduling for optimized learning.",
 ];
 
 const descriptions2 = [
-  "Full-stack web application to manage all restaurant operations, including inventory management and online slot reservations",
+  "Smart AI-powered chatbot enabling users to connect to and query any SQL database using natural language or raw SQL.",
 ];
 
 const descriptions3 = [
-  "An online bank that takes care of your transaction history, in a clear and organized way",
+  "AI-powered healthcare platform that analyzes medical reports and generates personalized treatment plans with a user-friendly interface.",
 ];
 
 const descriptions4 = [
-  "Manages projects and tasks seamlessly, built utilizing the reusable components React.js and styled with Tailwind",
+  "A SaaS AI platform that generates content such as news articles, product image analysis, and blog posts, enabling streamlined content creation.",
+];
+
+const descriptions5 = [
+  "A tour booking and management platform offering tour group and guide selection, personalized itineraries to enhance travel planning.",
+];
+
+const descriptions6 = [
+  "An AI-powered application that converts natural language queries into math problems and provides step-by-step solutions with clear explanations.",
 ];
 
 export default function Projects() {
@@ -46,23 +75,148 @@ export default function Projects() {
       <div className="projects-box">
         <div className="project-card-1">
           <div className="project-details">
-            <h2 className="project-title">RESTful API</h2>
+            <h2 className="project-title">StudyBuddy</h2>
             <p className="project-description">{descriptions1}</p>
             <div
               className="tech-icons"
               style={{ display: "flex", gap: "1rem", fontSize: "2rem" }}
             >
-              <div title="MongoDB">
-                <DiMongodb />
-              </div>
-              <div title="Express">
-                <FaServer />
+              <div title="Langchain">
+                <SiChainlink />
               </div>
               <div title="React">
                 <FaReact />
               </div>
               <div title="Node.js">
                 <FaNodeJs />
+              </div>
+              <div title="MongoDB">
+                <DiMongodb />
+              </div>
+              <div title="Google Calendar API">
+                <SiGooglecalendar />
+              </div>
+              <div title="Clerk Auth">
+                <SiClerk />
+              </div>
+            </div>
+          </div>
+          <a
+            href="https://github.com/sreejitadass/StudyBuddyAIProject"
+            className="repo-link"
+          >
+            Repository
+          </a>
+        </div>
+        <div className="project-card-2">
+          <div className="project-details">
+            <h2 className="project-title">SQLPro</h2>
+            <p className="project-description">{descriptions2}</p>
+            <div
+              className="tech-icons"
+              style={{ display: "flex", gap: "1rem", fontSize: "2rem" }}
+            >
+              <div title="Python">
+                <FaPython />
+              </div>
+              <div title="Streamlit">
+                <SiStreamlit />
+              </div>
+              <div title="LangChain (using Chainlink icon)">
+                <SiChainlink />
+              </div>
+              <div title="MySQL">
+                <SiMysql />
+              </div>
+              <div title="SQLite">
+                <SiSqlite />
+              </div>
+            </div>
+          </div>
+          <a
+            href="https://github.com/sreejitadass/Chat-with-SQL-Project"
+            className="repo-link"
+          >
+            Repository
+          </a>
+        </div>
+        <div className="project-card-3">
+          <div className="project-details">
+            <h2 className="project-title">HealthScope AI</h2>
+            <p className="project-description">{descriptions3}</p>
+            <div
+              className="tech-icons"
+              style={{ display: "flex", gap: "1rem", fontSize: "2rem" }}
+            >
+              <div title="React">
+                <FaReact />
+              </div>
+              <div title="Gemini">
+                <SiGooglegemini />
+              </div>
+              <div title="Tailwind CSS">
+                <SiTailwindcss />
+              </div>
+              <div title="Privy">
+                <FaUserShield />
+              </div>
+            </div>
+          </div>
+          <a
+            href="https://github.com/sreejitadass/AI-medical-treatment"
+            className="repo-link"
+          >
+            Repository
+          </a>
+        </div>
+        <div className="project-card-4">
+          <div className="project-details">
+            <h2 className="project-title">ContentCrafter</h2>
+            <p className="project-description">{descriptions4}</p>
+            <div
+              className="tech-icons"
+              style={{ display: "flex", gap: "1rem", fontSize: "2rem" }}
+            >
+              <div title="Next">
+                <SiNextdotjs />
+              </div>
+              <div title="Tailwind CSS">
+                <SiTailwindcss />
+              </div>
+              <div title="TypeScript">
+                <SiTypescript />
+              </div>
+              <div title="Clerk">
+                <SiClerk />
+              </div>
+            </div>
+          </div>
+          <a
+            href="https://github.com/sreejitadass/ContentCrafter"
+            className="repo-link"
+          >
+            Repository
+          </a>
+        </div>
+        <div className="project-card-5">
+          <div className="project-details">
+            <h2 className="project-title">Natours</h2>
+            <p className="project-description">{descriptions5}</p>
+            <div
+              className="tech-icons"
+              style={{ display: "flex", gap: "1rem", fontSize: "2rem" }}
+            >
+              <div title="JavaScript">
+                <SiJavascript />
+              </div>
+              <div title="MongoDB">
+                <SiMongodb />
+              </div>
+              <div title="CSS">
+                <FaCss3Alt />
+              </div>
+              <div title="Stripe">
+                <SiStripe />
               </div>
             </div>
           </div>
@@ -73,82 +227,27 @@ export default function Projects() {
             Repository
           </a>
         </div>
-        <div className="project-card-2">
+        <div className="project-card-6">
           <div className="project-details">
-            <h2 className="project-title">Restaurant Management System</h2>
-            <p className="project-description">{descriptions2}</p>
+            <h2 className="project-title">Mathify</h2>
+            <p className="project-description">{descriptions6}</p>
             <div
               className="tech-icons"
               style={{ display: "flex", gap: "1rem", fontSize: "2rem" }}
             >
-              <div title="SQL">
-                <FaDatabase />
+              <div title="Python">
+                <FaPython />
               </div>
-              <div title="Express">
-                <FaServer />
+              <div title="Streamlit">
+                <SiStreamlit />
               </div>
-              <div title="JavaScript">
-                <FaJsSquare />
-              </div>
-              <div title="Node.js">
-                <FaNodeJs />
-              </div>
-            </div>
-          </div>
-          <a href="https://github.com/" className="repo-link">
-            Repository
-          </a>
-        </div>
-        <div className="project-card-3">
-          <div className="project-details">
-            <h2 className="project-title">Online Bank Application</h2>
-            <p className="project-description">{descriptions3}</p>
-            <div
-              className="tech-icons"
-              style={{ display: "flex", gap: "1rem", fontSize: "2rem" }}
-            >
-              <div title="HTML">
-                <FaHtml5 />
-              </div>
-              <div title="CSS">
-                <FaCss3Alt />
-              </div>
-              <div title="JavaScript">
-                <FaJsSquare />
+              <div title="Openai">
+                <SiOpenai />
               </div>
             </div>
           </div>
           <a
-            href="https://github.com/sreejitadass/online-Bank-mini-project"
-            className="repo-link"
-          >
-            Repository
-          </a>
-        </div>
-        <div className="project-card-4">
-          <div className="project-details">
-            <h2 className="project-title">Project Management System</h2>
-            <p className="project-description">{descriptions4}</p>
-            <div
-              className="tech-icons"
-              style={{ display: "flex", gap: "1rem", fontSize: "2rem" }}
-            >
-              <div title="HTML">
-                <FaHtml5 />
-              </div>
-              <div title="CSS">
-                <FaCss3Alt />
-              </div>
-              <div title="JavaScript">
-                <FaJsSquare />
-              </div>
-              <div title="React">
-                <FaReact />
-              </div>
-            </div>
-          </div>
-          <a
-            href="https://github.com/sreejitadass/project-management-application"
+            href="https://github.com/sreejitadass/text-to-math-solver"
             className="repo-link"
           >
             Repository

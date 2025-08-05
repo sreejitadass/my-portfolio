@@ -396,10 +396,48 @@ h3 {
   transition: all 0.3s;
 }
 
+.project-card-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  height: 400px; /* Fixed height */
+  width: 100%; /* Width of 100% of its container */
+  background-image: linear-gradient(
+      to left top,
+      rgba(0, 0, 0, 0.35),
+      rgba(38, 38, 40, 0.185)
+    ),
+    url(./assets/pexels-zch-2791918-20376391.jpg);
+  background-size: 185%;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.project-card-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  height: 400px; /* Fixed height */
+  width: 100%; /* Width of 100% of its container */
+  background-image: linear-gradient(
+      to left top,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.185)
+    ),
+    url(./assets/portfolio-bg1.jpg);
+  background-size: 185%;
+  position: relative;
+  transition: all 0.3s;
+}
+
 .project-card-1:hover,
 .project-card-2:hover,
 .project-card-3:hover,
-.project-card-4:hover {
+.project-card-4:hover,
+.project-card-5:hover,
+.project-card-6:hover {
   transform: scale(1.06);
 }
 
