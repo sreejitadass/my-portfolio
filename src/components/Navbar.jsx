@@ -7,6 +7,7 @@ export default function NavBar() {
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+  const experienceRef = useRef(null);
 
   const handleScrollToSection = (refValue) => {
     if (refValue.current) {
@@ -118,6 +119,15 @@ export default function NavBar() {
           </li>
           <li>
             <a
+              href="#experience"
+              className="menu"
+              onClick={() => handleScrollToSection(experienceRef)}
+            >
+              <span>Experience</span>
+            </a>
+          </li>
+          <li>
+            <a
               href="#projects"
               className="menu"
               onClick={() => handleScrollToSection(projectsRef)}
@@ -151,6 +161,15 @@ export default function NavBar() {
               onClick={() => handleScrollToSection(skillsRef)}
             >
               <span>Skills</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#experience"
+              className="menu"
+              onClick={() => handleScrollToSection(experienceRef)}
+            >
+              <span>Experience</span>
             </a>
           </li>
           <li>

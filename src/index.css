@@ -306,6 +306,65 @@ h3 {
   transform: scale(1.18);
 }
 
+.section-experience {
+  padding: 10rem;
+  background-image: linear-gradient(
+    to bottom,
+    #1a1818 0%,
+    rgb(24, 31, 47) 100%
+  );
+}
+
+.section-experience h1 {
+  color: #bbe4ed;
+  margin-bottom: 6rem;
+}
+
+.experience-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-card {
+  background-color: #101314;
+  padding: 3rem 4rem;
+  border-radius: 18px;
+  box-shadow: 0 0 12px rgba(53, 127, 167, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(163, 215, 237, 0.35);
+}
+
+.experience-card h3 {
+  font-size: 2.6rem;
+  color: #a3d7ed;
+  margin-bottom: 1rem;
+}
+
+.experience-subtitle {
+  font-size: 1.6rem;
+  color: #ddd;
+  margin-bottom: 1.8rem;
+}
+
+.experience-card ul {
+  list-style-type: disc;
+  padding-left: 2.5rem;
+  font-size: 1.7rem;
+  color: #f4eeee;
+  line-height: 1.8;
+}
+
+.experience-card li {
+  margin-bottom: 1.2rem;
+}
+
 .section-projects {
   padding: 10rem;
   background-image: linear-gradient(to bottom, #1a1818 0%, black 100%);
