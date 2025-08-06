@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import myPicture from "./../assets/my-pic.jpeg";
+import { FaCode, FaLaptopCode, FaBook, FaPaintBrush } from "react-icons/fa";
+import ResumePDF from "./../assets/Resume_Updated.pdf";
 
 export default function AboutMe() {
   const aboutMeRef = useRef(null);
@@ -9,87 +11,73 @@ export default function AboutMe() {
       <div className="about-me-grid">
         <div className="about-me-text-box">
           <h1>
-            Who <span className="half-text">I'm</span>
+            About <span className="half-text">Me</span>
           </h1>
-          <p className="about-me-text">
-            Hi there! I'm a passionate and dedicated{" "}
-            <span className="half-text" style={{ fontWeight: "bold" }}>
-              Computer Science
-            </span>{" "}
-            student currently in my{" "}
-            <span className="half-text" style={{ fontWeight: "bold" }}>
-              third year{" "}
-            </span>
-            . My journey in the world of coding started with a simple curiosity,
-            and now, it's a full-blown love affair with technology and
-            innovation.
-          </p>
-          <h3>
-            <span className="half-text">My</span> Journey
-          </h3>
-          <p className="about-me-text">
-            I'm well-versed in a variety of programming languages and web
-            technologies. My fields of interest include{" "}
-            <span className="half-text" style={{ fontWeight: "bold" }}>
-              fullstack web development
-            </span>
-            , and I'm quite fluent in basics like{" "}
-            <span className="half-text" style={{ fontWeight: "bold" }}>
-              C++
-            </span>
-            ,{" "}
-            <span className="half-text" style={{ fontWeight: "bold" }}>
-              Python
-            </span>
-            ,{" "}
-            <span className="half-text" style={{ fontWeight: "bold" }}>
-              JavaScript
-            </span>{" "}
-            and so on. I love bringing ideas to life through code.
-          </p>
-          <h3>
-            Beyond <span className="half-text">the code</span>
-          </h3>
-          <p className="about-me-text">
-            When I'm not immersed in coding, you can find me{" "}
-            <span className="half-text" style={{ fontWeight: "bold" }}>
-              exploring the latest tech trends
-            </span>
-            ,{" "}
-            <span className="half-text" style={{ fontWeight: "bold" }}>
-              experimenting with new tools and frameworks
-            </span>
-            , and
-            <span className="half-text" style={{ fontWeight: "bold" }}>
-              working on exciting projects
-            </span>{" "}
-            that challenge my skills and creativity. I believe in continuous
-            learning and am always on the lookout for opportunities to expand my
-            knowledge and take on new challenges.
-          </p>
-          <h3>
-            <span className="half-text">Hobbies and</span> Interests
-          </h3>
-          <p className="about-me-text">
-            Apart from my tech pursuits, my hobbies include enjoying a variety
-            of{" "}
-            <span className="half-text" style={{ fontWeight: "bold" }}>
-              outdoor activities
-            </span>
-            ,{" "}
-            <span className="half-text" style={{ fontWeight: "bold" }}>
-              reading novels
-            </span>
-            ,{" "}
-            <span className="half-text" style={{ fontWeight: "bold" }}>
-              cooking
-            </span>
-            ,{" "}
-            <span className="half-text" style={{ fontWeight: "bold" }}>
-              art and painting
-            </span>
-            .
-          </p>
+          <div className="about-me-cards">
+            <div className="card">
+              <div className="card-header">
+                <FaCode />
+                <h3>
+                  My <span className="half-text">Education</span>
+                </h3>
+              </div>
+              <p>
+                I'm a passionate final year{" "}
+                <span className="half-text">Computer Science</span> student in
+                my at <span className="half-text">IIIT Guwahati</span>.
+              </p>
+            </div>
+            <div className="card">
+              <div className="card-header">
+                <FaLaptopCode />
+                <h3>
+                  Technical <span className="half-text">Skills</span>
+                </h3>
+              </div>
+              <p>
+                I'm proficient in <span className="half-text">C++</span>,{" "}
+                <span className="half-text">Python</span>,{" "}
+                <span className="half-text">React.js</span>, and specialize in{" "}
+                <span className="half-text">fullstack web development</span>. I
+                love transforming ideas into reality through code.
+              </p>
+            </div>
+            <div className="card">
+              <div className="card-header">
+                <FaBook />
+                <h3>
+                  Beyond <span className="half-text">the Code</span>
+                </h3>
+              </div>
+              <p>
+                When not coding, I explore{" "}
+                <span className="half-text">tech trends</span>, experiment with
+                new <span className="half-text">tools and frameworks</span>, and
+                work on <span className="half-text">exciting projects</span> to
+                challenge my skills and fuel my creativity.
+              </p>
+            </div>
+            <div className="card">
+              <div className="card-header">
+                <FaPaintBrush />
+                <h3>
+                  Hobbies & <span className="half-text">Interests</span>
+                </h3>
+              </div>
+              <p>
+                I enjoy <span className="half-text">outdoor activities</span>,{" "}
+                <span className="half-text">reading novels</span>,{" "}
+                <span className="half-text">cooking</span>, and{" "}
+                <span className="half-text">art and painting</span> to balance
+                my tech-driven life.
+              </p>
+            </div>
+            <div className="resume-download">
+              <a href={ResumePDF} download className="download-button">
+                <span>Download Resume</span>
+              </a>
+            </div>
+          </div>
         </div>
         <div className="about-me-img-box">
           <img src={myPicture} alt="My photo" className="my-pic" />

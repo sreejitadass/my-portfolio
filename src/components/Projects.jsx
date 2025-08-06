@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ResumePDF from "./../assets/Resume_Updated.pdf";
 
 // Tech stack icons
 import {
@@ -254,7 +253,7 @@ export default function Projects() {
           </a>
         </div>
       </div>
-      <div className="email-info">
+      {/* <div className="email-info">
         <p style={{ color: "#9dc5ce" }}>
           Want to work on more exciting projects?
         </p>
@@ -269,7 +268,7 @@ export default function Projects() {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
